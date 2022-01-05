@@ -53,16 +53,6 @@ app.listen(PORT, () => {
 let artistsRouter = require('./routers/artists.router');
 app.use('/artist', artistsRouter);
 
-
-
-app.get('/song', (req, res) => {
-    console.log(`In /songs GET`);
-    res.send(songList);
-});
-
-app.post('/song', (req, res) => {
-    songList.push(req.body);
-    res.sendStatus(201);
-});
-
-
+// setup songs router
+let songsRouter = require('./routers/songs.router');
+app.use('/song', songsRouter);
