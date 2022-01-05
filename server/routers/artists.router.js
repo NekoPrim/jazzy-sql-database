@@ -10,11 +10,11 @@ const pool = new pg.Pool({
 
 
 artistsRouter.get('/', (req, res) => {
-    console.log(`In /artists GET`);
+    console.log(`In /artist GET`);
     // res.send(artistList); dont need
     
     // make a sql query string
-    const queryText = 'SELECT * FROM artists;';
+    const queryText = 'SELECT * FROM artists ORDER BY year_born DESC;';
     // send sql query to database
     pool.query(queryText)
         .then((dbRes) => {

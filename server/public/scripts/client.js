@@ -18,8 +18,8 @@ function onReady() {
 function addArtist() {
     // Get info to send to the server
     const artistToSend = {
-        name: $('#artist-name').val(), 
-        birthdate: $('#artist-born').val()
+        artist_name: $('#artist-name').val(), 
+        year_born: $('#artist-born').val()
     };
 
     console.log('Adding artist', artistToSend);
@@ -95,8 +95,8 @@ function renderArtists( listOfArtists ) {
     for(let artist of listOfArtists) {
         $('#artistTableBody').append(`
                 <tr>
-                    <td>${artist.name}</td>
-                    <td>${artist.birthdate}</td>
+                    <td>${artist.artist_name}</td>
+                    <td>${artist.year_born}</td>
                 </tr>`
         );
     }
