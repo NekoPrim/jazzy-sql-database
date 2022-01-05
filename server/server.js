@@ -48,15 +48,12 @@ app.listen(PORT, () => {
 //     }
 // ];
 
-app.get('/artist', (req, res) => {
-    console.log(`In /songs GET`);
-    res.send(artistList);
-});
 
-app.post('/artist', (req, res) => {
-    artistList.push(req.body);
-    res.sendStatus(201);
-});
+// setup artists router
+let artistsRouter = require('./routers/artists.router');
+app.use('/artist', artistsRouter);
+
+
 
 app.get('/song', (req, res) => {
     console.log(`In /songs GET`);
