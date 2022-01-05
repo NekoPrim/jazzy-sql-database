@@ -1,12 +1,7 @@
-const pg = require('pg');
+const pool = require('../modules/pool');
 const express = require('express');
 const songsRouter = express.Router();
 
-// create "pool" connection to database
-const pool = new pg.Pool({
-    // database name
-    database: 'jazzy_sql'
-});
 
 
 songsRouter.get('/', (req, res) => {
