@@ -48,6 +48,6 @@ Using the ERD above:
 
 ## Stretch
 
-- [ ] Move the `pool` configuration out of `server.js` and into a `pool.js` module file.
-- [ ] Move the `\artist` routes to an artist router file. 
-- [ ] Move the `\song` routes to a song router file.
+- [X] Move the `pool` configuration out of `server.js` and into a `pool.js` module file.
+- [X] Move the `\artist` routes to an artist router file. 
+- [X] Move the `\song` routes to a song router file.
